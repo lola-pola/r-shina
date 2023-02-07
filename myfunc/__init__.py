@@ -29,5 +29,4 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
                                         status_code=401
             )
     except Exception as Error:
-        return func.HttpResponse(f"ERROR, {Error}. is not allowed.",
-                                        status_code=401
+        return func.HttpResponse(f"ERROR, {Error}. is not allowed.",status_code=401)
