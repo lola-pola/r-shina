@@ -41,7 +41,8 @@ jobs:
         with:
           name: python-app
           path: |
-            . 
+            .
+            myfunc
             !venv/
 
   deploy:
