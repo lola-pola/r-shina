@@ -8,6 +8,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     # try:
         # credential = DefaultAzureCredential()
         logging.info('UP')
+        username = req.params.get('username')
         return func.HttpResponse(
                  f"Hello, {username}. is not updated the keys.",
                  status_code=200
