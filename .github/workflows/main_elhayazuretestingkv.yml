@@ -43,7 +43,7 @@ jobs:
           path: |
             .
             myfunc
-            !venv/
+            venv/
 
   deploy:
     runs-on: ubuntu-latest
