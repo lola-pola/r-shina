@@ -1,12 +1,12 @@
 import logging
-# from azure.identity import DefaultAzureCredential
-# from azure.keyvault.keys import KeyClient
+from azure.identity import DefaultAzureCredential
+from azure.keyvault.keys import KeyClient
 import azure.functions as func
 
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
     try:
-        # credential = DefaultAzureCredential()
+        credential = DefaultAzureCredential()
         logging.info('UP')
         from azure.keyvault.keys import KeyClient
         key_client = KeyClient(vault_url="https://elhaysssss.vault.azure.net/", credential=credential)
