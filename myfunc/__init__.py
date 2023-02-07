@@ -5,6 +5,7 @@ import azure.functions as func
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
     try:
+        import paramiko
         from azure.identity import DefaultAzureCredential
         from azure.keyvault.keys import KeyClient
         credential = DefaultAzureCredential()
@@ -30,3 +31,6 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             )
     except Exception as Error:
         return func.HttpResponse(f"ERROR, {Error}. is not allowed.",status_code=401)
+
+
+#test
