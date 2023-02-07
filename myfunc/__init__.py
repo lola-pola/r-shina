@@ -17,7 +17,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         key = req.params.get('key')
         username = req.params.get('username')
         if username in allow_enable:
-            updated_key = key_client.update_key_properties(key, enabled=enable_status)
+            updated_key = key_client.update_key_properties(key, enabled=True)
             print(updated_key.name)
             print(updated_key.properties.enabled)
             return func.HttpResponse(
