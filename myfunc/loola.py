@@ -21,4 +21,4 @@ def loola(secretName='test', status=True):
         print(f"Your secret status is {status} .")
 
 
-loola()
+loola(status=True))
