@@ -11,11 +11,11 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         from azure.identity import DefaultAzureCredential
         logging.info('UP2')
 
-        # secretName='test'
-        # status= True
-        # KVUri = f"https://shuval.vault.azure.net/"
-        # credential = DefaultAzureCredential()
-        # client = SecretClient(vault_url=KVUri, credential=credenti
+        secretName='test'
+        status= True
+        KVUri = f"https://shuval.vault.azure.net/"
+        credential = DefaultAzureCredential()
+        # client = SecretClient(vault_url=KVUri, credential=credential)
         # print(f"Retrieving your secret from {secretName}.")
         # client.update_secret_properties(secretName, enabled=status
         # if status:
