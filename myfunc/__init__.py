@@ -6,7 +6,12 @@ import azure.functions as func
 def main(req: func.HttpRequest) -> func.HttpResponse:
     try:
         import paramiko
-        paramiko.SSHClient()
+        host = "test.rebex.net"
+        port = 22
+        username = "demo"
+        password = "password"
+        command = "ls"
+        ssh = paramiko.SSHClient()
         # from azure.identity import DefaultAzureCredential
         # from azure.keyvault.keys import KeyClient
         # credential = DefaultAzureCredential()
