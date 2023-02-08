@@ -10,6 +10,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         import os
         os.system('pip freeze')
         logging.info('UP')
+        return func.HttpResponse(f"DEBUG.",status_code=200)
         # from azure.identity import DefaultAzureCredential
         # from azure.keyvault.keys import KeyClient
         # credential = DefaultAzureCredential()
