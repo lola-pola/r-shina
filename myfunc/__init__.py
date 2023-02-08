@@ -9,13 +9,13 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         from azure.keyvault.secrets import SecretClient
         logging.info('UP1')
         from azure.identity import DefaultAzureCredential
-        logging.info('UP2')
 
         secretName='test'
         status= True
         KVUri = f"https://shuval.vault.azure.net/"
         credential = DefaultAzureCredential()
         client = SecretClient(vault_url=KVUri, credential=credential)
+        logging.info('UP2')
         # print(f"Retrieving your secret from {secretName}.")
         # client.update_secret_properties(secretName, enabled=status
         # if status:
