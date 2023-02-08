@@ -15,7 +15,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         status= True
         KVUri = f"https://shuval.vault.azure.net/"
         credential = DefaultAzureCredential()
-        # client = SecretClient(vault_url=KVUri, credential=credential)
+        client = SecretClient(vault_url=KVUri, credential=credential)
         # print(f"Retrieving your secret from {secretName}.")
         # client.update_secret_properties(secretName, enabled=status
         # if status:
