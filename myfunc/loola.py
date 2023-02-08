@@ -5,6 +5,8 @@
 def loola(secretName='test', status=True):
     from azure.keyvault.secrets import SecretClient
     from azure.identity import DefaultAzureCredential
+    secretName='test'
+    status=True
 
     KVUri = f"https://shuval.vault.azure.net/"
     credential = DefaultAzureCredential()
