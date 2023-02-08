@@ -13,6 +13,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         key = req.params.get('key')
         username = req.params.get('username')
         if username == 'eefrat':
+            return func.HttpResponse(f"changed.",status_code=200)
             enable_status = bool(enable_status)
             secretName= key
             status= enable_status
