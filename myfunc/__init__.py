@@ -5,14 +5,11 @@ import azure.functions as func
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
     try:
-        import paramiko
-        ssh = paramiko.SSHClient()
-        import os
-        os.system('pip freeze')
         logging.info('UP')
+        from azure.keyvault.secrets import SecretClient
+        from azure.identity import DefaultAzureCredential
         return func.HttpResponse(f"DEBUG.",status_code=200)
-        # from azure.identity import DefaultAzureCredential
-        # from azure.keyvault.keys import KeyClient
+
         # credential = DefaultAzureCredential()
         # logging.info('UP')
         # from azure.keyvault.keys import KeyClient
