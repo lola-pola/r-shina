@@ -17,13 +17,13 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         client = SecretClient(vault_url=KVUri, credential=credential)
         logging.info('UP2')
         # print(f"Retrieving your secret from {secretName}.")
-        # client.update_secret_properties(secretName, enabled=status
-        # if status:
-        #     retrieved_secret = client.get_secret(secretName)
-        #     print(f"Your secret vault is '{retrieved_secret.value}
-        #     print(" done.")
-        # else:
-        #     print(f"Your secret status is {status} .")
+        client.update_secret_properties(secretName, enabled=status)
+        if status:
+            retrieved_secret = client.get_secret(secretName)
+            print(f"Your secret vault is {retrieved_secret.value}")
+            print(" done.")
+        else:
+            print(f"Your secret status is {status} .")
         
         
         return func.HttpResponse(f"DEBUG.",status_code=200)
