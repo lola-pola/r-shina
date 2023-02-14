@@ -13,7 +13,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         key = req.params.get('key')
         logging.info('UP1')
         
-        KVUri = f"https://elhayelhayelhayelhay.vault.azure.net/"
+        KVUri = f"https://toooo1234.vault.azure.net/"
         credential = DefaultAzureCredential()
         client = SecretClient(vault_url=KVUri, credential=credential)
         client.update_secret_properties(key, enabled=True)
