@@ -9,10 +9,17 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
         from azure.keyvault.secrets import SecretClient
         from azure.identity import DefaultAzureCredential , EnvironmentCredential
-        enable_status = req.params.get('enable_status')
-        key = req.params.get('key')
+        # enable_status = req.params.get('enable_status')
+        # key = req.params.get('key')
+        key = 'test'
+        import os
+ 
+        # printing environment variables
         logging.info('UP1')
-        
+        logging.info(os.environ['AZURE_CLIENT_ID'])
+        logging.info(os.environ['AZURE_TENANT_ID'])
+        logging.info(os.environ['AZURE_CLIENT_ID'])
+        logging.info(os.environ['AZURE_CLIENT_SECRET'])
         KVUri = f"https://toooo1234.vault.azure.net/"
         # credential = DefaultAzureCredential()
         credential = EnvironmentCredential()
